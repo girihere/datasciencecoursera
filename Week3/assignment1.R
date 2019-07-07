@@ -1,4 +1,6 @@
-makeMatrix <- function(x = matrix()) {
+library("matlib")
+
+makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
   set <- function(y) {
     x <<- y
@@ -14,7 +16,7 @@ makeMatrix <- function(x = matrix()) {
 
 
 
-cacheinverse <- function(x, ...) {l
+cacheSolve <- function(x, ...) {l
   m <- x$getmean()
   if(!is.null(m)) {
     message("getting cached data")
